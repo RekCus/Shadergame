@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Animations;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,6 +8,8 @@ public class Player : MonoBehaviour
 
     public CharacterController controller;
     public float speed = 6f;
+    public Animator animator;
+    
     
     // Update is called once per frame
     void Update()
@@ -18,6 +21,11 @@ public class Player : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             controller.Move(direction * speed * Time.deltaTime);
+            animator.SetBool("Walking", true);
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
         }
     }
 }
