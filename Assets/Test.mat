@@ -77,7 +77,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Hunger: 0.27823606
+    - Hunger: -0.02
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1

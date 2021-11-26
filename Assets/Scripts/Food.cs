@@ -16,7 +16,7 @@ public class Food : MonoBehaviour
     {
         if (collision.gameObject == player )
         {
-            hunger.AddHunger(0.3f);
+            hunger.AddHunger(0.3f/10);
             Destroy(gameObject);
         }
     }

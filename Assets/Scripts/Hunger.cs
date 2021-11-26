@@ -7,28 +7,32 @@ public class Hunger : MonoBehaviour
     public Material material;
     public float hungerValue;
     public HungerBAR hungerbar;
+    public float minHunger;
+    public float maxHunger;
     // Start is called before the first frame update
     void Start()
     {
-        hungerValue = 1f;
-        hungerbar.SetMaxHunger(hungerValue);
+        minHunger = -0.02f;
+        maxHunger = 0.04f;
+        hungerValue = maxHunger;
+        hungerbar.SetMaxHunger(maxHunger);
     }
 
     // Update is called once per frame
     void Update()
     {
         Debug.Log(hungerValue);
-        if(hungerValue > 1f)
+        if(hungerValue > maxHunger)
         {
-            hungerValue = 1f;
+            hungerValue = maxHunger;
         }
-        else if(hungerValue > 0)
+        else if(hungerValue > minHunger)
         {
-            hungerValue -= Time.deltaTime / 5;
+            hungerValue -= Time.deltaTime / 55;
         }
-        else if(hungerValue <= 0)
+        else if(hungerValue <= minHunger)
         {
-            hungerValue = 0;
+            hungerValue = minHunger;
         }
 
         hungerbar.SetHunger(hungerValue);
