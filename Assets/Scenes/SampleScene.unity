@@ -946,8 +946,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 916c592fa97b94647b34b17f847b7db5, type: 2}
   hungerValue: 0
   hungerbar: {fileID: 2071377814}
-  minHunger: 0
-  maxHunger: 0
+  minHunger: 0.04
+  maxHunger: -0.02
 --- !u!143 &1384159727
 CharacterController:
   m_ObjectHideFlags: 0
